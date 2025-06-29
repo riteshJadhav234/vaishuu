@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Dearest Vaishu ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #333;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .heart {
+            position: absolute;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(10deg); }
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+        
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: #d81b60;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+        
+        .proposal-section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: slideUp 1s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .proposal-section h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #d81b60;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .proposal-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .heart-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #d81b60;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .heart-btn:hover {
+            transform: scale(1.2);
+            animation: none;
+        }
+        
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .photo-frame {
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .photo-frame:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .photo-frame:hover img {
+            transform: scale(1.1);
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: #d81b60;
+            color: white;
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #c2185b;
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.85);
+            color: #d81b60;
+            border: 2px solid #d81b60;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(216, 27, 96, 0.1);
+        }
+        
+        .music-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 1rem;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .music-toggle:hover {
+            transform: scale(1.1);
+            background: rgba(216, 27, 96, 0.2);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1rem;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #ff69b4;
+            opacity: 0;
+            animation: confettiDrop 5s linear forwards;
+            z-index: 1000;
+        }
+        
+        @keyframes confettiDrop {
+            0% { 
+                transform: translateY(-100vh) rotate(0deg); 
+                opacity: 1;
+            }
+            100% { 
+                transform: translateY(100vh) rotate(360deg); 
+                opacity: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .proposal-section {
+                padding: 2rem 1rem;
+            }
+            
+            .actions {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="music-toggle" onclick="toggleMusic()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a9 9 0 0 1 9 9"></path>
+            <path d="M12 3a9 9 0 0 0-9 9"></path>
+            <path d="M18 12a6 6 0 0 1-6 6"></path>
+            <path d="M6 12a6 6 0 0 0 6 6"></path>
+        </svg>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>My Dearest Vaishu</h1>
+            <p>Scroll down for a special message ❤️</p>
+        </header>
+        
+        <div class="proposal-section">
+            <h2>From the moment we met...</h2>
+            <p>Life has been more colorful, more meaningful, and infinitely more beautiful.</p>
+            <p>Your smile lights up my darkest days, your laughter is my favorite melody, and your love is my greatest treasure.</p>
+        </div>
+        
+        <div class="photo-gallery"> 
+            <div class="photo-frame">
+                <img src="v1.jpg" alt="love"  style="width: 225px; height: 270px;"/>
+/> />
+            </div>
+            <div class="photo-frame">
+                <<img src="v3.jpg" alt="love" style="width: 225px; height: 310px;" />
+            </div>
+            <div class="photo-frame">
+                <img src="v2.jpg" alt="love"  style="width: 235px; height: 270px; " />
+            </div>
+        </div>
+        
+        <div class="proposal-section">
+            <h2>Every day with you is a blessing</h2>
+            <p>Through all the laughter we've shared and the challenges we've faced together, one thing remains constant - my love for you grows stronger every day.</p>
+            <p>You make me a better person, and I want to spend the rest of my life showing you just how much you mean to me.</p>
+        </div>
+        
+        <div class="proposal-section" style="text-align: center;">
+            <h2>Vaishu, my love</h2>
+            <p>Will you make me the happiest person in the world?</p>
+            <p>❤️</p>
+            
+            <div class="actions">
+                <button class="btn btn-primary" onclick="showResponse('yes')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Yes, I will!
+                </button>
+                <button class="btn btn-secondary" onmouseover="moveButton(this)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 15l4-4m0 0l4-4m-4 4l-4-4m4 4l4 4"></path>
+                    </svg>
+                    Maybe later...
+                </button>
+            </div>
+        </div>
+        
+        <div id="response" style="display: none;" class="proposal-section">
+            <h2 id="response-text">You make me so happy!</h2>
+            <div id="confetti-container"></div>
+        </div>
+    </div>
+    
+    <footer>
+        Made with ♥ for Vaishu - Forever and Always
+    </footer>
+    
+    <script>
+        // Create floating hearts
+        function createHearts() {
+            const hearts = ['❤️', '💕', '💖', '💗', '💓'];
+            const colors = ['#ff69b4', '#ff85a2', '#ff9eb7', '#f48fb1', '#f8bbd0'];
+            
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = Math.random() * 100 + 'vh';
+                heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                heart.style.opacity = Math.random() * 0.5 + 0.5;
+                heart.style.animationDuration = (Math.random() * 10 + 5) + 's';
+                heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                document.body.appendChild(heart);
+            }
+        }
+        
+        // Music toggle
+        function toggleMusic() {
+            const music = document.getElementById('bgMusic');
+            const toggle = document.querySelector('.music-toggle');
+            
+            if (music.paused) {
+                music.play();
+                toggle.innerHTML = `
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a9 9 0 0 1 9 9"></path>
+                        <path d="M12 3a9 9 0 0 0-9 9"></path>
+                        <path d="M18 12a6 6 0 0 1-6 6"></path>
+                        <path d="M6 12a6 6 0 0 0 6 6"></path>
+                    </svg>
+                `;
+            } else {
+                music.pause();
+                toggle.innerHTML = `
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                `;
+            }
+        }
+        
+        // Move "No" button away on hover
+        function moveButton(btn) {
+            if (!btn.classList.contains('btn-primary')) {
+                const rect = btn.getBoundingClientRect();
+                const maxX = window.innerWidth - rect.width;
+                const maxY = window.innerHeight - rect.height;
+                
+                btn.style.position = 'absolute';
+                btn.style.left = Math.random() * maxX + 'px';
+                btn.style.top = Math.random() * maxY + 'px';
+            }
+        }
+        
+        // Show response when "Yes" is clicked
+        function showResponse(answer) {
+            const response = document.getElementById('response');
+            const responseText = document.getElementById('response-text');
+            
+            if (answer === 'yes') {
+                responseText.innerHTML = 'Yay! 🎉 I love you more than words can express! Now let\'s create our happily ever after together!';
+                createConfetti();
+                
+                // Play romantic music
+                const music = document.getElementById('bgMusic');
+                music.src = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3";
+                music.play();
+                document.querySelector('.music-toggle').innerHTML = `
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a9 9 0 0 1 9 9"></path>
+                        <path d="M12 3a9 9 0 0 0-9 9"></path>
+                        <path d="M18 12a6 6 0 0 1-6 6"></path>
+                        <path d="M6 12a6 6 0 0 0 6 6"></path>
+                    </svg>
+                `;
+            } else {
+                responseText.innerHTML = 'I\'ll keep asking until you say yes! 💘';
+            }
+            
+            response.style.display = 'block';
+            setTimeout(() => {
+                response.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+        
+        // Create confetti animation
+        function createConfetti() {
+            const colors = ['#ff69b4', '#ff85a2', '#ffffff', '#ffcce6', '#f8bbd0'];
+            const container = document.getElementById('confetti-container');
+            
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                confetti.style.animationDelay = (Math.random() * 2) + 's';
+                confetti.style.width = (Math.random() * 10 + 5) + 'px';
+                confetti.style.height = (Math.random() * 10 + 5) + 'px';
+                document.body.appendChild(confetti);
+            }
+        }
+        
+        // Initialize
+        window.onload = function() {
+            createHearts();
+            
+            // Check for music autoplay restrictions
+            document.addEventListener('click', function() {
+                const music = document.getElementById('bgMusic');
+                if (music.paused) {
+                    music.play().then(() => {
+                        music.pause();
+                    }).catch(error => {
+                        console.log('Autoplay not allowed without user interaction');
+                    });
+                }
+            }, { once: true });
+        };
+    </script>
+</body>
+</html>
+
